@@ -9,27 +9,17 @@
         <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hedvig+Letters+Serif:opsz@12..24&family=Source+Serif+4:opsz@8..60&display=swap"
               rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
         <title>VISIT FIRENZE</title>
     </head>
-    <body style="background-color: #FFDDAC">
-
-        <div style="width: 100%">
-            <div style="border: black 3px solid;
-                        background-color: #E89579;
-                        font-family: 'Bebas Neue', sans-serif;
-                        text-align: center;
-                        color: white;
-                        font-size: 80px;
-                        font-weight: bold;
-                        padding-top: 10px">
-                <img alt="Giglio di Firenze" src="images/giglio.svg" style="width: 100px; height: 100px">
+    <body>
+        <div>
+            <div id="header">
+                <img alt="Giglio di Firenze" id="img-header" src="images/giglio.svg">
                 <span>VISIT FIRENZE</span>
             </div>
-            <div style="background-color: white;
-                        font-size: 30px;
-                        padding-top: 20px;
-                        text-align: center;">
-                <table style="width: 100%; table-layout: fixed;">
+            <div id="navbar-container">
+                <table id="navbar-table">
                     <tr>
                         <td>
                             <a href="#piazza_della_signoria">Piazza della Signoria</a>
@@ -45,18 +35,11 @@
             </div>
         </div>
 
-        <div style="border: black solid 3px;
-                    margin-top: 30px;
-                    padding: 20px;
-                    width: 70%;
-                    margin-left: auto;
-                    margin-right: auto;
-                    background-color: white;
-                    text-align: justify">
-            <h2 id="piazza_della_signoria" style="font-family: 'Hedvig Letters Serif', serif;">
+        <div class="card">
+            <h2 class="card-title" id="piazza_della_signoria">
                 PIAZZA DELLA SIGNORIA
             </h2>
-            <p style="font-family: 'Source Serif 4', serif;">
+            <p class="card-text">
                 Piazza della Signoria è la piazza centrale di Firenze, sede del potere civile e cuore della vita sociale
                 della città.
                 A forma di L, si trova nella parte centrale della Firenze medievale,
@@ -75,22 +58,15 @@
                 Ammannati e Giambologna del 1575 eretta accanto a Palazzo Vecchio
                 in occasione della costruzione di un nuovo acquedotto.
             </p>
-            <img alt="Piazza della Signoria" src="images/piazza_della_signoria.webp" style="width: 300px">
+            <img alt="Piazza della Signoria" class="card-img" src="images/piazza_della_signoria.webp">
         </div>
 
 
-        <div style="border: black solid 3px;
-                    margin-top: 30px;
-                    padding: 20px;
-                    width: 70%;
-                    margin-left: auto;
-                    margin-right: auto;
-                    background-color: white;
-                    text-align: justify">
-            <h2 id="santa_maria_del_fiore" style="font-family: 'Hedvig Letters Serif', serif;">
+        <div class="card">
+            <h2 class="card-title" id="santa_maria_del_fiore">
                 SANTA MARIA DEL FIORE
             </h2>
-            <p style="font-family: 'Source Serif 4', serif;">
+            <p class="card-text">
                 La cattedrale metropolitana di Santa Maria del Fiore, conosciuta comunemente come duomo di Firenze, è la
                 principale chiesa fiorentina, simbolo della città ed uno dei più famosi d'Italia; quando fu completata,
                 nel Quattrocento, era la più grande chiesa al mondo, mentre oggi è ritenuta la terza in Europa dopo San
@@ -105,21 +81,14 @@
                 Al completamento della cupola del Brunelleschi segui la consacrazione da parte di papa Eugenio IV il 24
                 marzo del 1436. La dedica a Santa Maria del Fiore avvenne in corso d'opera, nel 1412.
             </p>
-            <img alt="Santa Maria del Fiore" src="images/santa_maria_del_fiore.webp" style="width: 300px">
+            <img alt="Santa Maria del Fiore" class="card-img" src="images/santa_maria_del_fiore.webp">
         </div>
 
-        <div style="border: black solid 3px;
-                    margin-top: 30px;
-                    padding: 20px;
-                    width: 70%;
-                    margin-left: auto;
-                    margin-right: auto;
-                    background-color: white;
-                    text-align: justify">
-            <h2 id="ponte_vecchio" style="font-family: 'Hedvig Letters Serif', serif;">
+        <div class="card">
+            <h2 class="card-title" id="ponte_vecchio">
                 PONTE VECCHIO
             </h2>
-            <p style="font-family: 'Source Serif 4', serif;">
+            <p class="card-text">
                 Il Ponte Vecchio è uno dei simboli della città di Firenze ed uno dei ponti più famosi del mondo.
                 Attraversa il
                 fiume Arno circa 150 metri a valle dell'area in cui il fiume presenta naturalmente uno dei punti in cui
@@ -133,21 +102,16 @@
                 Dopo la ricostruzione il ponte divenne a sesto ribassato.
                 Al giorno d'oggi è molto famoso e meta di numerosi turisti.
             </p>
-            <img alt="Ponte Vecchio" src="images/ponte_vecchio.webp" style="width: 300px">
+            <img alt="Ponte Vecchio" class="card-img" src="images/ponte_vecchio.webp">
         </div>
 
-        <div style="border: black solid 3px;
-                    margin-top: 30px;
-                    padding: 20px;
-                    background-color: white;
-                    text-align: center;
-                    color: red">
+        <div id="footer">
             Seguici sui Social:
             <a href="https://www.instagram.com/cittadifirenzeufficiale" target="_blank">
-                <img alt="Instagram" src="images/instagram.svg" style="width: 20px; height: 20px">
+                <img alt="Instagram" class="social-img" src="images/instagram.svg">
             </a>
             <a href="https://www.facebook.com/cittadifirenzeufficiale" target="_blank">
-                <img alt="Facebook" src="images/facebook.svg" style="width: 20px; height: 20px">
+                <img alt="Facebook" class="social-img" src="images/facebook.svg">
             </a>
         </div>
     </body>

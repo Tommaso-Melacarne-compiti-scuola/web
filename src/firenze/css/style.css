@@ -1,0 +1,68 @@
+body {
+    background-color: #FFDDAC
+}
+
+#header {
+    border: black 3px solid;
+    background-color: #E89579;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    padding-top: 10px
+}
+
+#img-header {
+    width: 100px;
+    height: 100px;
+}
+
+#navbar-container {
+    background-color: white;
+    font-size: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#navbar-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.card {
+    border: black solid 3px;
+    margin-top: 30px;
+    padding: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    text-align: justify
+}
+
+.card-title {
+    font-family: 'Hedvig Letters Serif', serif;
+}
+
+.card-text {
+    font-family: 'Source Serif 4', serif;
+}
+
+.card-img {
+    width: 300px;
+}
+
+.social-img {
+    width: 20px;
+    height: 20px;
+}
+
+#footer {
+    border: black solid 3px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    color: red
+}
