@@ -1,0 +1,254 @@
+@import 'https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;700&display=swap';
+
+:root {
+    background: #303030;
+    --text-primary: white;
+    --text-secondary: #1967D2;
+    --bg-primary: #202020;
+    --bg-secondary: #303030;
+    --rust-color: #F57000;
+    --typescript-color: #3178C6;
+    --r6-color: white;
+    --minecraft-color: black;
+    --valorant-color: #FF4655;
+    --misericordie-color: #F6F21F;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin-top: 0;
+    border-top: solid 0.125rem transparent;
+}
+
+#navbar li {
+    float: left;
+}
+
+#navbar li a {
+    display: block;
+    color: var(--text-primary);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    margin-bottom: 30px;
+    transition: color 350ms ease;
+}
+
+#navbar li a:hover {
+    color: var(--text-secondary);
+}
+
+#navbar li .active-tab {
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+#navbar li .active-tab::after {
+    border-top-width: 0.25rem;
+    border-top-style: solid;
+    border-radius: 0 0 0.25rem 0.25rem;
+    top: -0.125rem;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+.img-row-container {
+    width: 100%;
+}
+
+.img-row-inner {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    width: 20%;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+.img-composite {
+    width: 80%;
+}
+
+.img-object {
+    will-change: filter;
+    transition: 0.75s;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#img-lang-typescript {
+    transform: scale(0.8);
+}
+
+#img-lang-rust:hover {
+    filter: drop-shadow(0 0 0.75rem var(--rust-color));
+    transform: scale(0.92);
+}
+
+#img-lang-typescript:hover {
+    filter: drop-shadow(0 0 0.75rem var(--typescript-color));
+    transform: scale(0.75);
+}
+
+#img-game-r6 {
+    filter: invert(1);
+}
+
+#img-game-r6:hover {
+    filter: invert(1) drop-shadow(0 0 0.75rem var(--r6-color));
+    transform: scale(0.92);
+}
+
+#img-game-minecraft:hover {
+    filter: drop-shadow(0 0 0.75rem var(--minecraft-color));
+    transform: scale(0.92);
+}
+
+#img-game-valorant:hover {
+    filter: drop-shadow(0 0 0.75rem var(--valorant-color));
+    transform: scale(0.92);
+}
+
+#img-exp-misericordie:hover {
+    filter: drop-shadow(0 0 0.75rem var(--misericordie-color));
+    transform: scale(0.92);
+}
+
+#img-plus {
+    width: 30%;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    filter: invert(.8);
+    transform: rotate(45deg);
+    transition: all .5s;
+}
+
+#img-plus:hover {
+    transition: all .5s;
+    transform: rotate(405deg);
+}
+
+#main-section {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.section-title {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--text-primary);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.section-text {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: var(--text-primary);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.section-text::selection {
+    background: slategray;
+}
+
+.work-role {
+    font-weight: 600;
+    background: -webkit-linear-gradient(0deg, #0055FF 0%, #08F794 50%, #0055FF 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: glint 2.5s linear infinite;
+}
+
+.passion-gaming {
+    font-weight: 600;
+    background: -webkit-linear-gradient(0deg, #FCB045 0%, #FD1D1D 25%, #833AB4 50%, #FD1D1D 75%, #FCB045 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: glint 3.5s linear infinite;
+}
+
+.exp-volunteering {
+    font-weight: 600;
+    background: -webkit-linear-gradient(0deg, #7B7BF9 0%, #C71FE5 50%, #7B7BF9 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: glint 2.5s linear infinite;
+}
+
+
+@keyframes glint {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.rust-color {
+    text-decoration: underline;
+    text-decoration-color: var(--rust-color);
+    text-underline-offset: 2px;
+}
+
+.typescript-color {
+    text-decoration: underline;
+    text-decoration-color: var(--typescript-color);
+    text-underline-offset: 2px;
+}
+
+.r6-color {
+    text-decoration: underline;
+    text-decoration-color: var(--r6-color);
+    text-underline-offset: 2px;
+}
+
+.minecraft-color {
+    text-decoration: underline;
+    text-decoration-color: var(--minecraft-color);
+    text-underline-offset: 2px;
+}
+
+.valorant-color {
+    text-decoration: underline;
+    text-decoration-color: var(--valorant-color);
+    text-underline-offset: 2px;
+}
+
+.misericordie-color {
+    text-decoration: underline;
+    text-decoration-color: var(--misericordie-color);
+    text-underline-offset: 2px;
+}
