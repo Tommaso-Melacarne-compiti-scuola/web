@@ -1,29 +1,110 @@
+:root {
+    text-align: center;
+    background-color: gray;
+}
+
 #main {
+    align-content: center;
     border: 3px solid black;
-    margin-left: 30%;
-    margin-right: 30%;
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: white;
 }
 
 h1 {
-    text-align: center;
     font-size: 30px;
+    font-family: 'Lora', serif;
+}
+
+table, th, td {
+    width: 10%;
+    height: 10%;
+    border: 2px solid red;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 5px;
 }
 
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
+    width: 25%;
 }
 
-table {
-    border: 1px solid red;
-    border-collapse: collapse;
-    width: 100%;
+.day {
+    color: red;
 }
 
-th, td {
-    border: 1px solid red;
-    padding: 5px;
-    text-align: center;
+a:link, a:visited, a:hover, a:active {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.professor {
+    padding: 10px;
+}
+
+h3 {
+    padding: 10px;
+    font-family: 'Lora', serif;
+}
+
+.systems_and_networking {
+    background-color: #32CD32;
+}
+
+.computer_science_lab {
+    background-color: #9370DB;
+}
+
+.italian {
+    background-color: #B22222;
+}
+
+.telecommunications {
+    background-color: #FFA8AB;
+}
+
+.math {
+    background-color: #1E90FF;
+}
+
+.additional_math {
+    background-color: #00BFFF;
+}
+
+.history {
+    background-color: #FF7F50;
+}
+
+.english {
+    background-color: #FFFF00;
+}
+
+.systems_and_networking_lab {
+    background-color: #00FF00;
+}
+
+.computer_science {
+    background-color: #BA55D3;
+}
+
+.pe {
+    background-color: #A9A9A9;
+}
+
+.tpsit {
+    background-color: #FF8C00;
+}
+
+.tpsit_lab {
+    background-color: #D2691E;
+}
+
+.telecommunications_lab {
+    background-color: #FFC2C4;
 }
