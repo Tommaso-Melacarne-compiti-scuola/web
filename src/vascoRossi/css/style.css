@@ -1,0 +1,126 @@
+img#img-vasco {
+    width: 100%;
+    height: 400px;
+}
+
+nav#navbar {
+    background-color: black;
+    border: red 1px solid;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+nav#navbar > span > a {
+    text-decoration: none;
+}
+
+nav#navbar > span > a,
+nav#navbar > span > a:visited,
+nav#navbar > span > a:hover,
+nav#navbar > span > a:active {
+    color: unset;
+}
+
+nav#navbar > span:hover,
+nav#navbar > span:active {
+    background-color: red;
+    font-style: italic;
+}
+
+nav#navbar > span:hover {
+    color: black;
+}
+
+nav#navbar > span:active {
+    color: yellow;
+}
+
+#box {
+    border: 1px solid red;
+    padding: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#box > h1 {
+    font-family: Sen, sans-serif;
+    font-size: 2em;
+}
+
+#box > h1::first-letter {
+    font-size: 4em;
+    color: red;
+}
+
+table.dates {
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table.dates tr td,
+table.dates th {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+/*
+    `table:nth-of-type(n).dates` always refers to the nth table
+*/
+
+table:nth-of-type(1).dates {
+    border: 2px dashed black;
+}
+
+table:nth-of-type(2).dates {
+    border: 2px double black;
+}
+
+table:nth-of-type(1).dates th {
+    background-color: red;
+}
+
+table:nth-of-type(2).dates th {
+    background-color: #ADFF30;
+}
+
+table:nth-of-type(1).dates tr:hover {
+    background-color: cyan;
+}
+
+table:nth-of-type(2).dates tr:nth-child(odd) {
+    background-color: yellow;
+}
+
+#image-list > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+}
+
+#image-list > ul > li {
+    flex-basis: 350px;
+}
+
+#image-list > ul > li > img {
+    opacity: 0.8;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+#image-list > ul > li > img:hover {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    border: 3px solid yellow;
+}
