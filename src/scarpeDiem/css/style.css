@@ -1,0 +1,50 @@
+:root {
+    --cols-number: 3;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+header > h1 {
+    font-family: Montserrat, sans-serif;
+}
+
+header > h2 {
+    color: #C45D5F;
+    font-size: 0.8em;
+}
+
+#columns > div {
+    box-sizing: border-box;
+    border: 1px solid black;
+    float: left;
+    width: calc(100% / var(--cols-number));
+    padding: 1em;
+}
+
+#columns > div > div {
+    text-align: center;
+    background-color: #F0F7FF;
+    font-family: Montserrat, sans-serif;
+}
+
+#columns > div > img {
+    width: 100%;
+    height: 400px;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+#columns > div > img:hover {
+    opacity: 1;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
