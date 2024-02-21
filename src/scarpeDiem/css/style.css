@@ -45,20 +45,29 @@ header > h2 {
     flex-basis: calc(100% / var(--cols-number) - 1em);
 }
 
-#columns > ul > li > div {
+#columns > ul > li div {
     text-align: center;
     background-color: #F0F7FF;
     font-family: Montserrat, sans-serif;
 }
 
-#columns > ul > li > img {
+#columns > ul > li img {
     width: 100%;
     opacity: 0.8;
     transition: all 0.3s;
 }
 
-#columns > ul > li > img:hover {
+#columns > ul > li img:hover {
     opacity: 1;
     border-radius: 30px;
     transition: all 0.3s;
+}
+
+#go-back {
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+    margin: 1em auto;
+    padding: 1em;
+    background-color: #F0F7FF;
 }
