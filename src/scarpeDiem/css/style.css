@@ -1,10 +1,17 @@
 :root {
     --cols-number: 3;
+    --shoes-number: 4;
 }
 
 @media only screen and (max-aspect-ratio: 1/1) {
     #columns > ul {
         --cols-number: 1;
+    }
+    #shoes > ul {
+        --shoes-number: 2;
+    }
+    .shoe-sizes {
+        display: none;
     }
 }
 
@@ -70,4 +77,55 @@ header > h2 {
     margin: 1em auto;
     padding: 1em;
     background-color: #F0F7FF;
+    font-size: 1.5em;
+}
+
+#shoes > ul {
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    list-style: none;
+    align-items: center;
+
+    /* Browser override */
+    padding-inline-start: 0;
+}
+
+#shoes > ul > li {
+    flex-basis: calc(100% / var(--shoes-number) - 1em);
+    border: 1px solid black;
+    /* Simulates border-collapse property (can't use that on lis) */
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+#shoes > ul > li img {
+    width: 100%;
+}
+
+.shoe-name {
+    text-align: center;
+    font-size: 2em;
+    margin: 0.5em;
+    background-color: blue;
+    color: white;
+}
+
+.shoe-sizes table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 1em auto;
+}
+
+.shoe-sizes td, .shoe-sizes th {
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 1em;
+}
+
+.shoe-price {
+    text-align: center;
+    font-size: 2em;
+    color: red;
 }
