@@ -1,0 +1,90 @@
+:root {
+    --background-color: #09092D;
+    --data-num: 4;
+
+    background-color: var(--background-color);
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.earth-img,
+.earth-desc,
+.earth-data-item {
+    border: 1px solid white;
+}
+
+.earth-img, .earth-img img {
+    align-items: center;
+    width: 60%;
+}
+
+.earth-img img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.earth-desc {
+    padding: 1em;
+    width: 40%;
+}
+
+.earth-desc p::first-line {
+    color: yellow;
+}
+
+.earth-desc ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.earth-desc ul li {
+    border: 1px solid white;
+    padding: 0.5em;
+}
+
+.earth-desc ul li:hover {
+    background-color: blue;
+}
+
+.earth-data-item {
+    padding: 1em;
+    width: calc(100% / var(--data-num));
+}
+
+.earth-data-item h2 {
+    font-size: small;
+}
+
+.earth-data-item p {
+    font-size: larger;
+}
+
+/* mobile viewport */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .earth-img,
+    .earth-desc,
+    .earth-data-item {
+        width: 100%;
+    }
+}
