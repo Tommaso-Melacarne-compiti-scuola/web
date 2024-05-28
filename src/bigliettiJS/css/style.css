@@ -1,0 +1,18 @@
+.text-custom-lime {
+    color: lime;
+}
+
+body {
+    background: url('../images/matrix.avif');
+}
+
+.button-hover-custom {
+    transition: all 1s ease-in-out;
+}
+
+.button-hover-custom:hover {
+    rotate: 360deg;
+    color: lime;
+    background-color: black;
+    transition: all 1s ease-in-out;
+}
