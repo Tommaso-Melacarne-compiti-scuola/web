@@ -5,6 +5,11 @@ button.addEventListener('click', buttonFn);
 function buttonFn() {
     const age = prompt('Quanti anni hai?');
 
+    // Canceled
+    if (age == null) {
+        return;
+    }
+    
     if (!age || age < 0 || age > 120) {
         return buttonFn();
     }
