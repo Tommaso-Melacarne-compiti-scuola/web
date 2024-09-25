@@ -11,7 +11,13 @@
 }
 
 .fs-hero {
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+    .fs-hero {
+        font-size: 3rem;
+    }
 }
 
 /* Bootstrap's md screen width */
