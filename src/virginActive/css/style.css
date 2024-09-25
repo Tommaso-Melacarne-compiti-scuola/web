@@ -1,0 +1,34 @@
+.bg-custom-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.w-custom-icon {
+    width: 40px;
+}
+
+.fs-title {
+    font-size: 2rem;
+}
+
+.fs-hero {
+    font-size: 3rem;
+}
+
+/* Bootstrap's md screen width */
+@media (min-width: 768px) {
+    .fs-hero {
+        font-size: 5rem;
+    }
+}
+
+.ff-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ff-raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+.fw-black {
+    font-weight: 900;
+}
