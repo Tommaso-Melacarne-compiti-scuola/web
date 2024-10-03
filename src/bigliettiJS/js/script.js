@@ -3,23 +3,25 @@ let button = document.getElementById('buy');
 button.addEventListener('click', buttonFn);
 
 function buttonFn() {
-    const age = prompt('Quanti anni hai?');
+    let age = prompt('Quanti anni hai?');
 
     // Canceled
     if (age == null) {
         return;
     }
     
+    age = parseInt(age);
+    
     if (!age || age < 0 || age > 120) {
         return buttonFn();
     }
-
+    
     let msg;
     if (age < 5) {
         msg = "Il biglietto è gratis";
-    } else if (age > 18 && age < 25) {
+    } else if (age > 18 && age <= 25) {
         msg = "Il costo del biglietto è di 3.50€";
-    } else if (age > 50 && age < 55) {
+    } else if (age >= 50 && age <= 55) {
         msg = "Il costo del biglietto è di 5€";
     } else {
         msg = "Il costo del biglietto è di 8€";
