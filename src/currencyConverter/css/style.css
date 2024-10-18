@@ -1,0 +1,11 @@
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    transition: all 0.5s;
+}
+
+.fs-custom-title {
+    font-size: 2.5rem !important;
+}
