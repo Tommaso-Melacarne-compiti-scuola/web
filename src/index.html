@@ -8,14 +8,23 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
           crossorigin="anonymous">
     <script>
+
+        function createButtonElementFromName(name) {
+            const button = document.createElement('button');
+            button.className = 'btn btn-outline-primary m-2';
+            button.textContent = name;
+            button.onclick = function () {
+                window.location.href = `/${name}`;
+            };
+            return button;
+        }
+
+
         // JavaScript function to create the buttons dynamically
         window.onload = () => {
-            const buttons = [
-                'bigliettiJS',
+            const thirdClassProjects = [
                 'bootstrap',
                 'cosaMiPiace',
-                'currencyConverter',
-                'divisors',
                 'earth',
                 'firenze',
                 'firstHTML',
@@ -30,29 +39,52 @@
                 'viaggiaMente',
                 'viaggiaMenteGrid',
                 'viaggiaMenteGridConsigli',
-                'virginActive',
                 'willSmith',
             ];
 
-            const container = document.getElementById('button-container');
+            const fourthClassProjects = [
+                'bigliettiJS',
+                'currencyConverter',
+                'divisors',
+                'virginActive',
+            ];
 
-            buttons.forEach(name => {
-                const button = document.createElement('button');
-                button.className = 'btn btn-primary m-2';
-                button.textContent = name;
-                button.onclick = function () {
-                    window.location.href = `/${name}`;
-                };
-                container.appendChild(button);
+            const thirdClassContainer = document.getElementById('third-class-container');
+            const fourthClassContainer = document.getElementById('fourth-class-container');
+
+            thirdClassProjects.forEach(name => {
+                const button = createButtonElementFromName(name);
+                thirdClassContainer.appendChild(button);
+            });
+
+            fourthClassProjects.forEach(name => {
+                const button = createButtonElementFromName(name);
+                fourthClassContainer.appendChild(button);
             });
         };
     </script>
   </head>
-  <body class="bg-dark text-white">
+  <body data-bs-theme="dark" class="text-white bg-black">
 
     <div class="container mt-5">
       <h1 class="text-center mb-4">My school projects</h1>
-      <div id="button-container" class="d-flex flex-wrap justify-content-center"></div>
+
+      <h2 class="text-center mb-4">3rd Class Projects</h2>
+      <div id="third-class-container" class="d-flex flex-wrap justify-content-center mb-5"></div>
+
+      <h3 class="text-center"> Final Project </h3>
+
+      <div class="d-flex flex-wrap justify-content-center mb-5">
+        <a href="https://short.polp.online/" class="btn btn-outline-primary m-2" target="_blank">
+          Link Shortener
+        </a>
+        <a href="https://github.com/PolpOnline/loco_link_shortener" class="btn btn-outline-primary m-2" target="_blank">
+          GitHub
+        </a>
+      </div>
+
+      <h2 class="text-center mb-4">4th Class Projects</h2>
+      <div id="fourth-class-container" class="d-flex flex-wrap justify-content-center"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
