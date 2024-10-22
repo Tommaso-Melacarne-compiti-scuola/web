@@ -12,7 +12,7 @@ darkmodeToggleEl.addEventListener("click", () => {
 
 // Upon page load, set the theme to the preferred theme
 (function () {
-    setPageTheme(getPreferredTheme());
+    setTheme(getPreferredTheme());
 })();
 
 function getCurrentToggleState() {
