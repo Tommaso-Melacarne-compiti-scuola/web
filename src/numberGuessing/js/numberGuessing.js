@@ -11,9 +11,14 @@ const maxAttempts = 7;
 
 const randomNumberMin = 1;
 const randomNumberMax = 100;
-const randomNumber = Math.floor(Math.random() * (randomNumberMax - randomNumberMin + 1)) + randomNumberMin;
 
-console.log(randomNumber);
+function getRandomIntInclusive(min, max) {
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max);
+    return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
+}
+
+const randomNumber = getRandomIntInclusive(randomNumberMin, randomNumberMax);
 
 let remainingAttempts = maxAttempts;
 const insertedNumbers = [];
