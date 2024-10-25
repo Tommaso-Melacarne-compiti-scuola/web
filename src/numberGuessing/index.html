@@ -1,0 +1,92 @@
+<!doctype html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport"
+  />
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <link href="./css/style.css" rel="stylesheet"/>
+  <link
+          crossorigin="anonymous"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          rel="stylesheet"
+  />
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          rel="stylesheet"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+  <title>Guess number</title>
+</head>
+<body>
+  <div class="mt-5 mx-5 border border-5 border-black text-center bg-white py-5">
+    <h1 class="fw-black mb-3">Number guessing game</h1>
+
+    <h2 class="my-3">
+      <i class="bi bi-arrow-right-circle" id="instructionsArrow"></i> Instructions
+    </h2>
+
+    <p class="d-none my-3" id="instructions">
+      The computer will generate a random number between 0 and 100. You have to guess it. You have 7 attempts to guess
+      the number.
+    </p>
+
+    <button type="button" class="btn btn-primary mt-3" id="playBtn">PLAY</button>
+  </div>
+
+  <div class="mt-5 mx-5 text-center bg-white py-5 d-none" id="guessBox">
+    <div class="input-group w-25 mx-auto bg-white rounded">
+      <input type="number" class="form-control border-black" aria-label="Guess" placeholder="Number you want to guess"
+             id="guessInput">
+      <button class="btn btn-outline-secondary border-black" type="button" id="guessBtn">Check</button>
+    </div>
+
+    <h1 class="fw-black my-5" id="result"></h1>
+
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="fs-5 fw-semibold">
+            Remaining attempts
+          </div>
+          <i class="bi bi-joystick fs-custom-result-icon d-block"></i>
+          <div id="remainingAttempts">
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="fs-5 fw-semibold">
+            Tip
+          </div>
+          <i class="bi bi-info-square fs-custom-result-icon d-block"></i>
+          <div id="tip">
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="fs-5 fw-semibold">
+            Numbers inserted so far
+          </div>
+          <i class="bi bi-pencil-square fs-custom-result-icon d-block"></i>
+          <div id="insertedNumbers">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script
+          crossorigin="anonymous"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  <script defer src="js/instructions.js"></script>
+  <script defer src="js/numberGuessing.js"></script>
+</body>

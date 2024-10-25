@@ -1,0 +1,19 @@
+body {
+    background: linear-gradient(to right, lightblue, blue);
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+.ff-anton {
+    font-family: "Anton", sans-serif;
+}
+
+.fs-custom-result-icon {
+    font-size: 8rem;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
