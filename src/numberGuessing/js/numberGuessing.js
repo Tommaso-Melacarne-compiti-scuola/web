@@ -43,7 +43,7 @@ function userWon() {
 }
 
 function userLost() {
-    resultEl.innerHTML = 'YOU LOSE';
+    resultEl.innerHTML = `YOU LOSE - The number was ${randomNumber}`;
     guessBoxEl.classList.replace('bg-white', 'bg-danger');
 
     endGame();
