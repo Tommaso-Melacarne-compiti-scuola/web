@@ -1,0 +1,47 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+.background-hero-image {
+    background-image: url("../images/starry_sky.avif");
+}
+
+.fs-hero {
+    font-size: 5rem;
+}
+
+.create-hover-effect {
+    transition: background-color 1s;
+}
+
+.create-hover-effect:hover {
+    background-color: rgba(0, 128, 255, 20%);
+}
+
+.custom-input-control {
+    display: block;
+}
+
+.custom-input {
+    outline: none;
+    border: none;
+    border-bottom: 0.15rem solid black;
+    transition: border-bottom 0.3s;
+    width: 75%;
+}
+
+.custom-input:focus {
+    border-bottom-color: rgba(0, 128, 255, 0.8);
+}
+
+.custom-input-button {
+    display: inline;
+}
+
+.custom-dialog {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 50vw;
+}
