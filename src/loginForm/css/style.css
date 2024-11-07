@@ -24,9 +24,9 @@
 }
 
 .custom-input {
-    outline: none;
     border: none;
     border-bottom: 0.15rem solid black;
+    outline: none;
     transition: border-bottom 0.3s;
     width: 75%;
 }

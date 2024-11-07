@@ -18,8 +18,8 @@
           rel="stylesheet"
   />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
   <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
@@ -29,48 +29,48 @@
 </head>
 <body>
   <!-- sign  up -->
-  <dialog class="custom-dialog border-1 border-primary bg-primary-subtle" id="signup-dialog">
-    <h3>
-      Sign up
-    </h3>
+  <dialog
+          class="custom-dialog border-1 border-primary bg-primary-subtle"
+          id="signup-dialog"
+  >
+    <h3>Sign up</h3>
     <form id="signup-form">
       <div class="mb-3">
-        <label for="signup-username" class="form-label">Username</label>
+        <label class="form-label" for="signup-username">Username</label>
         <div class="custom-input-control">
           <input
-                  type="text"
+                  autocomplete="username"
                   class="custom-input rounded"
                   id="signup-username"
                   name="username"
                   required
-                  autocomplete="username"
+                  type="text"
           />
         </div>
       </div>
       <div class="mb-3">
-        <label for="signup-password" class="form-label">Password</label>
+        <label class="form-label" for="signup-password">Password</label>
         <div class="custom-input-control">
           <input
-                  type="password"
+                  autocomplete="new-password"
                   class="custom-input rounded"
                   id="signup-password"
                   name="password"
                   required
-                  autocomplete="new-password"
+                  type="password"
           />
           <i class="bi bi-eye-slash fs-5" id="signup-toggle-password"></i>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Sign up</button>
+      <button class="btn btn-primary" type="submit">Sign up</button>
     </form>
 
-    <div id="signup-feedback" class="mt-5 mb-2 text-white p-3 d-none"></div>
+    <div class="mt-5 mb-2 text-white p-3 d-none" id="signup-feedback"></div>
 
     <button class="btn position-absolute top-0 end-0" id="close-signup-dialog">
       <i class="bi bi-x fs-5"></i>
     </button>
   </dialog>
-
 
   <div class="container-fluid h-100 w-100">
     <div class="row h-100">
@@ -91,43 +91,43 @@
         <h3 class="fs-5">
           Don't have an account?
           <span
-                  id="create-account"
                   class="text-primary fw-normal create-hover-effect"
+                  id="create-account"
           >Create one</span
           >, takes a few minutes.
         </h3>
 
-        <div id="login-feedback" class="mt-5 mb-2 text-white p-3"></div>
+        <div class="mt-5 mb-2 text-white p-3" id="login-feedback"></div>
 
-        <form id="login-form" class="mt-5">
+        <form class="mt-5" id="login-form">
           <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
+            <label class="form-label" for="username">Username</label>
             <div class="custom-input-control">
               <input
-                      type="text"
+                      autocomplete="username"
                       class="custom-input"
                       id="username"
                       name="username"
                       required
-                      autocomplete="username"
+                      type="text"
               />
             </div>
           </div>
           <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
+            <label class="form-label" for="password">Password</label>
             <div class="custom-input-control">
               <input
-                      type="password"
+                      autocomplete="current-password"
                       class="custom-input"
                       id="password"
                       name="password"
                       required
-                      autocomplete="current-password"
+                      type="password"
               />
               <i class="bi bi-eye-slash fs-5" id="toggle-password"></i>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary">Login</button>
+          <button class="btn btn-primary" type="submit">Login</button>
         </form>
       </div>
     </div>

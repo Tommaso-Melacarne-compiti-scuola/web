@@ -8,7 +8,9 @@ loginTogglePasswordIcon.addEventListener("click", () => {
 
 // Signup form
 const signupPasswordEl = document.getElementById("signup-password");
-const signupTogglePasswordIcon = document.getElementById("signup-toggle-password");
+const signupTogglePasswordIcon = document.getElementById(
+    "signup-toggle-password",
+);
 
 signupTogglePasswordIcon.addEventListener("click", () => {
     togglePasswordListener(signupPasswordEl, signupTogglePasswordIcon);
