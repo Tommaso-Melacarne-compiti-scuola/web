@@ -1,17 +1,34 @@
-const loginFormEl = document.getElementById("login-form");
-const feedbackEl = document.getElementById("login-feedback");
-
 const users = ["ciccioGamer", "icardi", "khaby", "rocco", "anna"];
 const passwords = ["ciccio1", "wandanara", "tiktok", "siffredi33", "tatangelo"];
 
-function changeLoginFeedback(message, bsColorClass) {
-    feedbackEl.textContent = message;
-    feedbackEl.classList.remove('bg-danger');
-    feedbackEl.classList.remove('bg-success');
-    feedbackEl.classList.add(`bg-${bsColorClass}`);
+// Internal utility
+/**
+ * Change the feedback message of a form
+ * @param {HTMLElement} el The element to change the feedback of
+ * @param {string} message The new message
+ * @param {string} bsColorClass A Bootstrap color class (e.g. "danger", "success")
+ */
+function changeFeedback(el, message, bsColorClass) {
+    el.textContent = message;
+    el.classList.remove('bg-danger');
+    el.classList.remove('bg-success');
+    el.classList.add(`bg-${bsColorClass}`);
 }
 
-loginFormEl.addEventListener("submit", function (event) {
+// Login form
+const loginFeedbackEl = document.getElementById("login-feedback");
+
+
+/**
+ * Change the feedback message of the login
+ * @param {string} message The new message
+ * @param {string} bsColorClass A Bootstrap color class (e.g. "danger", "success")
+ */
+function changeLoginFeedback(message, bsColorClass) {
+    changeFeedback(loginFeedbackEl, message, bsColorClass);
+}
+
+document.getElementById("login-form").addEventListener("submit", function (event) {
     event.preventDefault();
     const username = event.target.username.value;
     const password = event.target.password.value;
@@ -28,4 +45,44 @@ loginFormEl.addEventListener("submit", function (event) {
     }
 
     changeLoginFeedback("Logged in successfully", "success")
+});
+
+
+// Open and close the signup dialog
+const signupDialogEl = document.getElementById("signup-dialog");
+
+document.getElementById("close-signup-dialog").addEventListener("click", function () {
+    signupDialogEl.open = false;
+});
+
+document.getElementById("create-account").addEventListener("click", function () {
+    signupDialogEl.open = true;
+});
+
+
+// Signup form
+const signupFeedbackEl = document.getElementById("signup-feedback");
+/**
+ * Change the feedback message of the signup
+ * @param {string} message The new message
+ * @param {string} bsColorClass A Bootstrap color class (e.g. "danger", "success")
+ */
+function changeSignupFeedback(message, bsColorClass) {
+    signupFeedbackEl.classList.remove('d-none');
+    changeFeedback(signupFeedbackEl, message, bsColorClass);
+}
+
+document.getElementById("signup-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const username = event.target.username.value;
+    const password = event.target.password.value;
+
+    if (users.includes(username)) {
+        changeSignupFeedback("Signup failed. User already exists", "danger");
+        return;
+    }
+
+    users.push(username);
+    passwords.push(password);
+    changeSignupFeedback("Signup successful", "success");
 });

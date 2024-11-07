@@ -29,13 +29,46 @@
 </head>
 <body>
   <!-- sign  up -->
-  <dialog class="custom-dialog border-0" open>
+  <dialog class="custom-dialog border-1 border-primary bg-primary-subtle" id="signup-dialog">
     <h3>
       Sign up
     </h3>
     <form id="signup-form">
-
+      <div class="mb-3">
+        <label for="signup-username" class="form-label">Username</label>
+        <div class="custom-input-control">
+          <input
+                  type="text"
+                  class="custom-input rounded"
+                  id="signup-username"
+                  name="username"
+                  required
+                  autocomplete="username"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="signup-password" class="form-label">Password</label>
+        <div class="custom-input-control">
+          <input
+                  type="password"
+                  class="custom-input rounded"
+                  id="signup-password"
+                  name="password"
+                  required
+                  autocomplete="new-password"
+          />
+          <i class="bi bi-eye-slash fs-5" id="signup-toggle-password"></i>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign up</button>
     </form>
+
+    <div id="signup-feedback" class="mt-5 mb-2 text-white p-3 d-none"></div>
+
+    <button class="btn position-absolute top-0 end-0" id="close-signup-dialog">
+      <i class="bi bi-x fs-5"></i>
+    </button>
   </dialog>
 
 
