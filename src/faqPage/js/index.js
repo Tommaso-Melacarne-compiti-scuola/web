@@ -23,6 +23,8 @@ function replaceIcon(number) {
     }
 }
 
-expandable(1);
-expandable(2);
-expandable(3);
+const expandables = document.getElementsByClassName('expandable');
+
+for (let i = 0; i < expandables.length; i++) {
+    expandable(i);
+}
