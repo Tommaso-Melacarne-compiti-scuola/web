@@ -1,0 +1,16 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+.fs-hero {
+    font-size: 4rem;
+}
+
+.fs-faq {
+    font-size: 4rem;
+}
+
+.expandable:hover {
+    background-color: #CCCCCC;
+}
