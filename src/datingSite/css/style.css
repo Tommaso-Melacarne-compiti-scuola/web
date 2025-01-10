@@ -1,0 +1,23 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.fs-title {
+  font-size: 4rem;
+}
+
+.fs-subtitle {
+  font-size: 2rem;
+}
+
+.w-95 {
+  width: 95%;
+}
+
+.pic-max-height {
+  max-height: 300px;
+}
+
+body {
+  background: url("../images/background.avif");
+}
