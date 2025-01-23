@@ -81,8 +81,6 @@ const products = [
   },
 ];
 
-let filter = "";
-
 function getFilteredProductsByCategory(category) {
   if (!category) {
     return products;
@@ -133,9 +131,9 @@ for (const filterItem of filterItems) {
     ev.target.classList.toggle("active");
     const nextFilter = ev.target.innerHTML.trim();
 
-    if (nextFilter === "All") {
-      filter = "";
-    } else {
+    let filter = "";
+
+    if (nextFilter !== "All") {
       filter = nextFilter;
     }
 
@@ -147,13 +145,15 @@ for (const filterItem of filterItems) {
 
 function searchProductByName(name) {
   const nameToSearch = name.trim().toLowerCase();
-  
-  return products.filter((product) => product.productName.toLowerCase().includes(nameToSearch));
+
+  return products.filter((product) =>
+    product.productName.toLowerCase().includes(nameToSearch),
+  );
 }
 
 document.getElementById("search-form").addEventListener("submit", (ev) => {
   ev.preventDefault();
-  
+
   resetNavbarActive();
   document.getElementById("navbar-all").classList.add("active");
 
