@@ -83,7 +83,7 @@ const products = [
 
 let filter = "";
 
-function getFilteredProducts(category) {
+function getFilteredProductsByCategory(category) {
   if (!category) {
     return products;
   }
@@ -117,11 +117,11 @@ function appendProducts(products) {
 
 appendProducts(products);
 
-function resetActive() {
-  const els = document.getElementsByClassName("active");
+function resetNavbarActive() {
+  const navbarTitles = document.getElementsByClassName("active");
 
-  for (const el of els) {
-    el.classList.remove("active");
+  for (const navbarTitle of navbarTitles) {
+    navbarTitle.classList.remove("active");
   }
 }
 
@@ -129,7 +129,7 @@ const filterItems = document.getElementsByClassName("filter-item");
 
 for (const filterItem of filterItems) {
   filterItem.addEventListener("click", (ev) => {
-    resetActive();
+    resetNavbarActive();
     ev.target.classList.toggle("active");
     const nextFilter = ev.target.innerHTML.trim();
 
@@ -139,21 +139,25 @@ for (const filterItem of filterItems) {
       filter = nextFilter;
     }
 
-    const filteredProducts = getFilteredProducts(filter);
+    const filteredProducts = getFilteredProductsByCategory(filter);
 
     appendProducts(filteredProducts);
   });
 }
 
+function searchProductByName(name) {
+  const nameToSearch = name.trim().toLowerCase();
+  
+  return products.filter((product) => product.productName.toLowerCase().includes(nameToSearch));
+}
+
 document.getElementById("search-form").addEventListener("submit", (ev) => {
   ev.preventDefault();
-  resetActive();
+  resetNavbarActive();
 
-  const search = document.getElementById("search").value.trim().toLowerCase();
+  const search = document.getElementById("search").value;
 
-  const filteredProducts = products.filter((product) =>
-    product.productName.toLowerCase().includes(search),
-  );
+  const filteredProducts = searchProductByName(search);
 
   appendProducts(filteredProducts);
 });
