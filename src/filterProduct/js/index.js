@@ -153,7 +153,9 @@ function searchProductByName(name) {
 
 document.getElementById("search-form").addEventListener("submit", (ev) => {
   ev.preventDefault();
+  
   resetNavbarActive();
+  document.getElementById("navbar-all").classList.add("active");
 
   const search = document.getElementById("search").value;
 
