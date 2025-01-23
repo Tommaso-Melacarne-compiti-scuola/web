@@ -1,3 +1,17 @@
+/**
+ * A product object
+ * @typedef {Object} Product
+ * @property {string} productName
+ * @property {string} category
+ * @property {string} price
+ * @property {string} image
+ * @property {Array<string>} size
+ * @property {boolean} sale
+ */
+
+/**
+ * @type {Product[]}
+ */
 const products = [
   {
     productName: "OXFORD SHIRT TOMMY HILFIGER",
@@ -78,9 +92,15 @@ const products = [
     image: "sunRalph.webp",
     size: [""],
     sale: true,
-  },
+  }
 ];
 
+/**
+ * Get the products filtered by category
+ * 
+ * @param category {string}
+ * @returns {Product[]}
+ */
 function getFilteredProductsByCategory(category) {
   if (!category) {
     return products;
@@ -90,6 +110,11 @@ function getFilteredProductsByCategory(category) {
 
 const productsEl = document.getElementById("products");
 
+/**
+ * Append the products to the DOM
+ * 
+ * @param products {Product[]}
+ */
 function appendProducts(products) {
   // reset the products
   productsEl.innerHTML = "";
@@ -115,6 +140,9 @@ function appendProducts(products) {
 
 appendProducts(products);
 
+/**
+ * Reset the active class of the navbar
+ */
 function resetNavbarActive() {
   const navbarTitles = document.getElementsByClassName("active");
 
@@ -143,6 +171,12 @@ for (const filterItem of filterItems) {
   });
 }
 
+/**
+ * Search a product by its name
+ *
+ * @param name {string}
+ * @returns {Product[]}
+ */
 function searchProductByName(name) {
   const nameToSearch = name.trim().toLowerCase();
 
