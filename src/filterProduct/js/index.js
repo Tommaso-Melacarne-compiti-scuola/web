@@ -115,13 +115,7 @@ function appendProducts(products) {
   }
 }
 
-function updateFilteredProducts() {
-  const filteredProducts = getFilteredProducts(filter);
-
-  appendProducts(filteredProducts);
-}
-
-updateFilteredProducts();
+appendProducts(products);
 
 function resetActive() {
   const els = document.getElementsByClassName("active");
@@ -144,7 +138,10 @@ for (const filterItem of filterItems) {
     } else {
       filter = nextFilter;
     }
-    updateFilteredProducts();
+
+    const filteredProducts = getFilteredProducts(filter);
+
+    appendProducts(filteredProducts);
   });
 }
 
