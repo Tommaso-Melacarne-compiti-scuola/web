@@ -90,9 +90,11 @@ function getFilteredProducts(category) {
   return products.filter((product) => product.category === category);
 }
 
+const productsEl = document.getElementById("products");
+
 function appendProducts(products) {
   // reset the products
-  document.getElementById("products").innerHTML = "";
+  productsEl.innerHTML = "";
 
   for (const product of products) {
     const productElement = document.createElement("div");
@@ -109,7 +111,7 @@ function appendProducts(products) {
                 ${product.sale ? `<p class="text-danger fw-bold">On Sale!</p>` : ""}
             </div>
         `;
-    document.getElementById("products").appendChild(productElement);
+    productsEl.appendChild(productElement);
   }
 }
 
