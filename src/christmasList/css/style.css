@@ -7,6 +7,10 @@ body {
   background-size: cover;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .custom-container {
   width: 95% !important;
   max-width: 500px !important;

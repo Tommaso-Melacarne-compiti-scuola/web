@@ -84,7 +84,7 @@ function renderGifts() {
     div.innerHTML = `
             <div class="bg-warning w-100 py-1 fs-3">
                 ${gift.articolo}
-                <i class="bi bi-x delete-icon text-danger"></i>
+                <i class="bi bi-x delete-icon text-danger cursor-pointer"></i>
             </div>
             <p class="mt-2">${gift.destinatario}</p>
             <p>${gift.prezzo}€</p>
