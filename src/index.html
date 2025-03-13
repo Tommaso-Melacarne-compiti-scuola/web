@@ -22,7 +22,7 @@
 
         // JavaScript function to create the buttons dynamically
         window.onload = () => {
-            const thirdClassProjects = [
+            const thirdClassProjectsNames = [
                 'bootstrap',
                 'cosaMiPiace',
                 'earth',
@@ -42,7 +42,7 @@
                 'willSmith',
             ];
 
-            const fourthClassProjects = [
+            const fourthClassProjectsNames = [
                 'bigliettiJS',
                 'chartJS',
                 'christmasList',
@@ -60,15 +60,15 @@
             const thirdClassContainer = document.getElementById('third-class-container');
             const fourthClassContainer = document.getElementById('fourth-class-container');
 
-            thirdClassProjects.forEach(name => {
+            for (const name of thirdClassProjectsNames) {
                 const button = createButtonElementFromName(name);
                 thirdClassContainer.appendChild(button);
-            });
+            }
 
-            fourthClassProjects.forEach(name => {
+            for (const name of fourthClassProjectsNames) {
                 const button = createButtonElementFromName(name);
                 fourthClassContainer.appendChild(button);
-            });
+            }
         };
     </script>
   </head>
